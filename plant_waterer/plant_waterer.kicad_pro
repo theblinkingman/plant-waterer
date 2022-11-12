@@ -381,7 +381,10 @@
         "nets": [
           "+12V",
           "/AO1",
-          "/AO2"
+          "/AO2",
+          "/B01",
+          "/BO2",
+          "Net-(J1-Pad1)"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
