@@ -1,6 +1,6 @@
+# pyright: reportShadowedImports=false
 #!/usr/bin/env python3
 import time
-from adafruit_datetime import datetime, timedelta
 import board
 import digitalio
 import analogio
@@ -59,29 +59,32 @@ logs = []
 def get_last_waterings():
     count = 0
     for timestamp in logs:
-        if datetime.now() - timestamp < timedelta(hours=window_hours):
+        if time.monotonic_ns() - timestamp < (window_hours * 60 * 60 * 1000 * 1000):
             count += 1
     return count
 
 def main():
+    last_water = 0
     while True:
         reading = 0
         for i in range(avg_window):
             reading += sensor.value
         reading /= avg_window
-        timestamp = datetime.now()
         log_line = "Sen:\t{:>5.3f}".format(reading/65535 * 3.3)
         text_area.text = log_line
         # print(log_line)
         
-        if reading < threshhold:
+        current = time.monotonic_ns()
+        
+        # Only water once an hour if needed
+        if reading < threshhold and (current - last_water) > (60 * 60 * 1000 * 1000):
             if get_last_waterings() <= max_waterings:
-                logs.append(timestamp)
+                last_water = current
+                logs.append(last_water)
                 # print(timestamp.isoformat() + "\tWatering!!! %d" % get_last_waterings()) 
                 run_motor(watering_time)
 
-        # wait an hour and log again
-        time.sleep(1 * 60 * 60)
+        time.sleep(10)
 
 
 if __name__ == "__main__":
