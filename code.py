@@ -10,7 +10,7 @@ from adafruit_display_text import label
 import terminalio
 
 # Motor control pins
-motor_enable = digitalio.DigitalInOut(board.D6)
+motor_enable = digitalio.DigitalInOut(board.D8)
 motor_enable.direction = digitalio.Direction.OUTPUT
 motor1 = digitalio.DigitalInOut(board.D3)
 motor1.direction = digitalio.Direction.OUTPUT
@@ -21,7 +21,7 @@ motor2.value = False
 motor_enable.value = False
 
 # Just turn it high for FULL POWER
-motor_pwm = digitalio.DigitalInOut(board.D1)
+motor_pwm = digitalio.DigitalInOut(board.D7)
 motor_pwm.direction = digitalio.Direction.OUTPUT
 motor_pwm.value = True
 
@@ -47,8 +47,10 @@ def run_motor(sec):
 
 # TDR sensor
 sensor = analogio.AnalogIn(board.A0)
-# Determined expermentely
-threshhold = int(1.4/3.3 * 65535)
+# Water level pot
+threshold = analogio.AnalogIn(board.A1)
+# Determined experimentally
+# threshhold = int(1.43/3.3 * 65535)
 window_hours = 24
 max_waterings = 8
 watering_time = 45
@@ -70,18 +72,18 @@ def main():
         for i in range(avg_window):
             reading += sensor.value
         reading /= avg_window
-        log_line = "Sen:\t{:>5.3f}".format(reading/65535 * 3.3)
+        log_line = "Sen:\t{:>5.3f}\nSet:\t{:>5.3f}".format(reading/65535 * 3.3, threshold.value/65535 * 3.3)
         text_area.text = log_line
-        # print(log_line)
         
         current = time.monotonic_ns()
         
         # Only water once an hour if needed
-        if reading < threshhold and (current - last_water) > (60 * 60 * 1000 * 1000):
+        if reading < threshold.value and (current - last_water) > (60 * 60 * 1000 * 1000):
             if get_last_waterings() <= max_waterings:
                 last_water = current
                 logs.append(last_water)
                 # print(timestamp.isoformat() + "\tWatering!!! %d" % get_last_waterings()) 
+                text_area.text = "Watering!"
                 run_motor(watering_time)
 
         time.sleep(10)
