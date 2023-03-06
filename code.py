@@ -64,8 +64,8 @@ def run_motor(sec):
     motor2.value = False
 
 # TDR sensor
-# sensor = analogio.AnalogIn(board.A2)
-sensor = onewireio.OneWire(board.GP28)
+sensor = analogio.AnalogIn(board.A2)
+# sensor = onewireio.OneWire(board.GP28)
 # Water level pot
 threshold = analogio.AnalogIn(board.A0)
 # Determined experimentally
@@ -85,16 +85,7 @@ def get_last_waterings():
     return count
 
 def read_sensor():
-    sensor.reset()
-    sensor.write_bit(True)
-    sensor.write_bit(False)
-    sensor.write_bit(False)
-    sensor.write_bit(False)
-    sensor.write_bit(False)
-    sensor.write_bit(False)
-    sensor.write_bit(False)
-    sensor.write_bit(False)
-    return 1
+    return sensor.value
 
 def main():
     last_water = 0
