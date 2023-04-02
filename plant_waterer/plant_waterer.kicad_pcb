@@ -2641,7 +2641,7 @@
   (gr_text "12V" (at 100.076 58.928) (layer "F.SilkS") (tstamp a8886a0d-ac25-4fe5-b10f-f1438360244e)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text "12V 160mA" (at 118.745 53.34 90) (layer "F.SilkS") (tstamp b78b465e-493b-43bd-9060-1dcf6c2eb402)
+  (gr_text "12V 500mA" (at 118.745 53.34 90) (layer "F.SilkS") (tstamp b78b465e-493b-43bd-9060-1dcf6c2eb402)
     (effects (font (size 1 1) (thickness 0.15)))
   )
 

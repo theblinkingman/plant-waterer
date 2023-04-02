@@ -469,52 +469,7 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": [
-      {
-        "netclass": "Power",
-        "pattern": "+12*"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "/AO1"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "/AO2"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "/B01"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "/BO2"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "/VIN"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "*5V*"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "+3*"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "VIN*"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "GND"
-      },
-      {
-        "netclass": "50R",
-        "pattern": "PULSE"
-      }
-    ]
+    "netclass_patterns": []
   },
   "pcbnew": {
     "last_paths": {
@@ -551,8 +506,18 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "fix_passive_vals": false,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 0,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,

@@ -1,6 +1,6 @@
 (kicad_sch (version 20230121) (generator eeschema)
 
-  (uuid 9554f4fa-56a7-48ca-b232-bffd0614a2ec)
+  (uuid a85cfb13-924a-4606-b223-c90440de5a61)
 
   (paper "A4")
 
@@ -1329,6 +1329,9 @@
   (junction (at 58.42 171.45) (diameter 0) (color 0 0 0 0)
     (uuid ba2bf53e-084a-4cbf-9149-1fdd76fa7096)
   )
+  (junction (at 69.85 171.45) (diameter 0) (color 0 0 0 0)
+    (uuid caff66b2-1d2f-434f-92a5-fd0b679cdce4)
+  )
   (junction (at 48.26 171.45) (diameter 0) (color 0 0 0 0)
     (uuid dad8ffec-a84b-43fe-bd4d-bb12c6e3d4b2)
   )
@@ -1350,6 +1353,8 @@
   (junction (at 24.13 29.21) (diameter 0) (color 0 0 0 0)
     (uuid fb025da1-ab1f-42ff-a04a-9bf49202bd50)
   )
+
+  (no_connect (at 73.66 39.37) (uuid 44a90d0a-4087-45ad-adcd-84243347f1c6))
 
   (wire (pts (xy 222.25 57.15) (xy 237.49 57.15))
     (stroke (width 0) (type default) (color 255 0 0 1))
@@ -1411,7 +1416,7 @@
     (stroke (width 0) (type default))
     (uuid 13176d80-eb02-40fd-b4b9-9c318142734b)
   )
-  (wire (pts (xy 58.42 171.45) (xy 74.93 171.45))
+  (wire (pts (xy 58.42 171.45) (xy 69.85 171.45))
     (stroke (width 0) (type default))
     (uuid 134807d7-9aab-4c93-8edc-fc5cc65d2228)
   )
@@ -1423,7 +1428,7 @@
     (stroke (width 0) (type default))
     (uuid 17195442-4938-420a-a11c-8f81f0c4e9ce)
   )
-  (wire (pts (xy 167.64 105.41) (xy 167.64 120.65))
+  (wire (pts (xy 167.64 100.33) (xy 167.64 120.65))
     (stroke (width 0) (type default))
     (uuid 1a32b650-a28b-4056-8820-bc287947f238)
   )
@@ -1473,6 +1478,10 @@
     (uuid 2654c712-511c-4393-b15e-722db798229f)
   )
 
+  (wire (pts (xy 69.85 171.45) (xy 74.93 171.45))
+    (stroke (width 0) (type default))
+    (uuid 2696190f-a8be-493e-b21d-a5a80090a037)
+  )
   (wire (pts (xy 85.09 34.29) (xy 85.09 40.64))
     (stroke (width 0) (type default))
     (uuid 26dda0ca-6adb-404f-b657-fd3c7272bf13)
@@ -1520,6 +1529,10 @@
   (wire (pts (xy 55.88 171.45) (xy 58.42 171.45))
     (stroke (width 0) (type default))
     (uuid 323c4ec5-e7a1-4645-8aeb-03383d10d5bc)
+  )
+  (wire (pts (xy 182.88 100.33) (xy 182.88 104.14))
+    (stroke (width 0) (type default))
+    (uuid 34bd0b19-dd53-4188-ad12-1136876e70f2)
   )
   (polyline (pts (xy 101.6 90.17) (xy 101.6 156.21))
     (stroke (width 0) (type default))
@@ -1588,7 +1601,7 @@
     (uuid 51f2dacb-ae18-4b63-b6be-2d2831b9a1e3)
   )
 
-  (wire (pts (xy 48.26 182.88) (xy 48.26 187.96))
+  (wire (pts (xy 48.26 182.88) (xy 48.26 186.69))
     (stroke (width 0) (type default))
     (uuid 5248583d-7e61-4bc8-8635-c444409b7bb9)
   )
@@ -1670,7 +1683,7 @@
     (stroke (width 0) (type default))
     (uuid 6bbef285-acf3-4813-86b6-93df85fbda08)
   )
-  (wire (pts (xy 58.42 182.88) (xy 58.42 187.96))
+  (wire (pts (xy 58.42 182.88) (xy 58.42 186.69))
     (stroke (width 0) (type default))
     (uuid 6c2a37af-0c24-4794-bc8e-8edecf224d1c)
   )
@@ -1811,11 +1824,11 @@
     (stroke (width 0) (type default))
     (uuid a03170f3-4319-43da-ad88-145b6737006e)
   )
-  (wire (pts (xy 16.51 177.8) (xy 16.51 182.88))
+  (wire (pts (xy 16.51 177.8) (xy 16.51 184.15))
     (stroke (width 0) (type default))
     (uuid a09cab1f-4422-4255-abbf-f7429dda2ad0)
   )
-  (wire (pts (xy 172.72 105.41) (xy 172.72 115.57))
+  (wire (pts (xy 172.72 100.33) (xy 172.72 115.57))
     (stroke (width 0) (type default))
     (uuid a2b55d72-8db7-4756-8e1e-9c1f7fb6e231)
   )
@@ -2053,9 +2066,17 @@
     (stroke (width 0) (type default))
     (uuid f0d31baa-691c-4a3a-8d59-1d5f3bca72db)
   )
+  (wire (pts (xy 157.48 100.33) (xy 157.48 102.87))
+    (stroke (width 0) (type default))
+    (uuid f2dae5f8-e03e-4310-8510-e6c43a8f502b)
+  )
   (wire (pts (xy 16.51 170.18) (xy 21.59 170.18))
     (stroke (width 0) (type default))
     (uuid f34cf262-2dda-41ee-9005-ab5b60f7f780)
+  )
+  (wire (pts (xy 69.85 181.61) (xy 69.85 186.69))
+    (stroke (width 0) (type default))
+    (uuid fa8e337a-68b9-45fb-9e28-320ce88aa302)
   )
   (polyline (pts (xy 13.97 158.75) (xy 78.74 158.75))
     (stroke (width 0) (type default))
@@ -2309,19 +2330,19 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 48.26 187.96 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 48.26 186.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 15467cec-3752-4ec2-a463-5e769ee5fce8)
-    (property "Reference" "#PWR045" (at 48.26 194.31 0)
+    (property "Reference" "#PWR045" (at 48.26 193.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 48.26 191.77 0)
+    (property "Value" "GND" (at 48.26 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (at 48.26 187.96 0)
+    (property "Footprint" "" (at 48.26 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 48.26 187.96 0)
+    (property "Datasheet" "" (at 48.26 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 39e27c32-0039-4506-9f46-aef95c908986))
@@ -2427,19 +2448,49 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 58.42 187.96 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 157.48 102.87 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2790d93b-8670-42df-b0cd-1d14613eb252)
+    (property "Reference" "#PWR057" (at 157.48 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 157.48 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "" (at 157.48 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 157.48 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0785b81f-ddf8-4d1a-8006-c71361421ebc))
+    (instances
+      (project "plant_combined"
+        (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
+          (reference "#PWR057") (unit 1)
+        )
+      )
+      (project "tdr_pos"
+        (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
+          (reference "#PWR015") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 58.42 186.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 30e412ec-6c72-41f5-8987-45807f201224)
-    (property "Reference" "#PWR013" (at 58.42 194.31 0)
+    (property "Reference" "#PWR013" (at 58.42 193.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 58.42 191.77 0)
+    (property "Value" "GND" (at 58.42 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (at 58.42 187.96 0)
+    (property "Footprint" "" (at 58.42 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 58.42 187.96 0)
+    (property "Datasheet" "" (at 58.42 186.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e54f6305-c60f-4f8e-892a-9077d7f4a83a))
@@ -2508,9 +2559,9 @@
   )
 
   (symbol (lib_id "Connector:TestPoint") (at 120.65 118.11 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 36678e13-00c1-47d7-a66b-c02c90aacabc)
-    (property "Reference" "STOP" (at 123.19 121.4119 0)
+    (property "Reference" "STOP1" (at 119.38 123.19 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "TestPoint" (at 118.11 120.1421 0)
@@ -2526,7 +2577,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
-          (reference "STOP") (unit 1)
+          (reference "STOP1") (unit 1)
         )
       )
       (project "tdr_pos"
@@ -2664,7 +2715,7 @@
     (property "Value" "TestPoint" (at 213.36 37.3379 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Footprint" "TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm" (at 210.82 39.37 0)
+    (property "Footprint" "Library:TestPoint_2Pads_Pitch2.54mm_Drill1mm" (at 210.82 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 210.82 39.37 0)
@@ -2737,36 +2788,6 @@
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
           (reference "#PWR09") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Connector:TestPoint") (at 167.64 105.41 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 54ca01d0-e037-459d-8aff-837cc4f86f03)
-    (property "Reference" "MOSI" (at 162.56 101.6 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "TestPoint" (at 170.18 103.3779 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded" (at 172.72 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 172.72 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 9fb4454a-1aa5-4d1a-b994-6f662272d979))
-    (instances
-      (project "plant_combined"
-        (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
-          (reference "MOSI") (unit 1)
-        )
-      )
-      (project "tdr_pos"
-        (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
-          (reference "TP10") (unit 1)
         )
       )
     )
@@ -2875,40 +2896,10 @@
     )
   )
 
-  (symbol (lib_id "Connector:TestPoint") (at 172.72 105.41 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 59e147e1-b762-4e4f-a7c9-fbd17577bdf2)
-    (property "Reference" "SCLK" (at 173.99 101.6 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "TestPoint" (at 175.26 103.3779 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded" (at 177.8 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 177.8 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8209a6f6-4461-4ae8-89d2-aad7615c15f4))
-    (instances
-      (project "plant_combined"
-        (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
-          (reference "SCLK") (unit 1)
-        )
-      )
-      (project "tdr_pos"
-        (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
-          (reference "TP9") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Connector:TestPoint") (at 114.3 115.57 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 5b4bdc8a-19f5-455a-9030-673f5d314c57)
-    (property "Reference" "START" (at 116.84 112.2679 0)
+    (property "Reference" "START1" (at 111.76 109.22 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 116.84 113.5379 0)
@@ -2924,7 +2915,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
-          (reference "START") (unit 1)
+          (reference "START1") (unit 1)
         )
       )
       (project "tdr_pos"
@@ -3011,6 +3002,67 @@
       (project "tdr_pos"
         (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
           (reference "RV1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint_2Pole") (at 162.56 100.33 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 5f758bd5-d2b0-4456-9273-efc5a20bbfab)
+    (property "Reference" "MOSI1" (at 165.1 102.87 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TestPoint" (at 160.02 102.3621 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Footprint" "Library:TestPoint_2Pads_Pitch2.54mm_Drill1mm" (at 162.56 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 162.56 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 026038de-1332-46b1-a602-d8680a0fdcba))
+    (pin "2" (uuid 1b839a20-65d5-4511-89f4-7934010898d7))
+    (instances
+      (project "plant_combined"
+        (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
+          (reference "MOSI1") (unit 1)
+        )
+      )
+      (project "tdr_pos"
+        (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
+          (reference "TP10") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 182.88 104.14 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 5faac1c6-a298-4601-8ca3-d5496b13acf8)
+    (property "Reference" "#PWR056" (at 182.88 110.49 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 182.88 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "" (at 182.88 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 182.88 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0b9c4f6d-6096-4306-ba3d-f0de49868b97))
+    (instances
+      (project "plant_combined"
+        (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
+          (reference "#PWR056") (unit 1)
+        )
+      )
+      (project "tdr_pos"
+        (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -3258,6 +3310,36 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 69.85 186.69 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 85b5318e-80f4-4746-8645-543c2531d45c)
+    (property "Reference" "#PWR052" (at 69.85 193.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 69.85 190.5 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "" (at 69.85 186.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 69.85 186.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid d5017b83-373e-4364-91ed-d7fe5e630154))
+    (instances
+      (project "plant_combined"
+        (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
+          (reference "#PWR052") (unit 1)
+        )
+      )
+      (project "tdr_pos"
+        (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
+          (reference "#PWR0104") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 243.84 134.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 88fe98ec-08ab-4c6a-b609-06629d6b7c29)
@@ -3486,10 +3568,49 @@
     )
   )
 
+  (symbol (lib_id "Connector:TestPoint_2Pole") (at 69.85 176.53 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 966f926f-b2bb-4e47-9aab-2e7e81cf0fed)
+    (property "Reference" "TP10" (at 72.39 177.165 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "TestPoint_2Pole" (at 67.31 176.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "Library:TestPoint_2Pads_Pitch2.54mm_Drill1mm" (at 69.85 176.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 69.85 176.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 72dbf221-9db8-458c-bf67-47bedbc51fcc))
+    (pin "2" (uuid f0f55c78-de22-438f-9e09-207e742ac9d4))
+    (instances
+      (project "plant_combined"
+        (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
+          (reference "TP10") (unit 1)
+        )
+        (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
+          (reference "TP3") (unit 1)
+        )
+      )
+      (project "plant_waterer"
+        (path "/c45c0694-9602-4b56-aa7f-43745d5d08c4"
+          (reference "TP4") (unit 1)
+        )
+      )
+      (project "tdr_pos"
+        (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
+          (reference "TP1") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Connector:TestPoint") (at 78.74 29.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b55a8ee8-4f89-415c-be6a-4afb2ee07755)
-    (property "Reference" "CLK" (at 81.28 25.9079 0)
+    (property "Reference" "CLK1" (at 81.28 25.9079 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 81.28 27.1779 0)
@@ -3505,12 +3626,43 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
-          (reference "CLK") (unit 1)
+          (reference "CLK1") (unit 1)
         )
       )
       (project "tdr_pos"
         (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
           (reference "TP8") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Connector:TestPoint_2Pole") (at 177.8 100.33 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid b5c23cc7-f02f-4940-ae4c-b90547218563)
+    (property "Reference" "SCLK1" (at 175.26 97.79 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "TestPoint" (at 180.34 98.2979 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Footprint" "Library:TestPoint_2Pads_Pitch2.54mm_Drill1mm" (at 177.8 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 177.8 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fab72c7a-a07b-4a3b-b926-049699a83f61))
+    (pin "2" (uuid d053b907-c579-4af1-a3d9-d9d6920b2bf5))
+    (instances
+      (project "plant_combined"
+        (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
+          (reference "SCLK1") (unit 1)
+        )
+      )
+      (project "tdr_pos"
+        (path "/efe00140-c2a9-43c9-8a91-2dc458d0d3a7"
+          (reference "TP9") (unit 1)
         )
       )
     )
@@ -3774,19 +3926,19 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 16.51 182.88 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 16.51 184.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e44f2516-790c-40b2-8e9d-2005241c6697)
-    (property "Reference" "#PWR027" (at 16.51 189.23 0)
+    (property "Reference" "#PWR027" (at 16.51 190.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 16.51 186.69 0)
+    (property "Value" "GND" (at 16.51 187.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (at 16.51 182.88 0)
+    (property "Footprint" "" (at 16.51 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 16.51 182.88 0)
+    (property "Datasheet" "" (at 16.51 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ee18fad0-65bf-4030-8b65-b7e0f80764c1))
@@ -3840,7 +3992,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 227.33 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f479cabe-a759-4a3c-8d68-3e73308706c3)
-    (property "Reference" "V REF" (at 229.87 116.0779 0)
+    (property "Reference" "V REF1" (at 229.87 116.0779 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TestPoint" (at 229.87 117.3479 0)
@@ -3856,7 +4008,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2/bd86b945-c087-489f-87da-de931ba4c915"
-          (reference "V REF") (unit 1)
+          (reference "V REF1") (unit 1)
         )
       )
       (project "tdr_pos"
