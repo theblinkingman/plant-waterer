@@ -29,12 +29,32 @@ display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=32, 
 text_area = label.Label(terminalio.FONT, text="Hello World")
 text_area.x = 2
 text_area.y = 7
-display.show(text_area)
 
 log_line = "Connecting to WiFi %s" % os.getenv('WIFI_SSID')
 text_area.text = log_line
-print()
-print(log_line)
+# print()
+# print(log_line)
+
+bitmap = displayio.Bitmap(display.width, 1, 2)
+palette = displayio.Palette(2)
+palette[0] = 0
+palette[1] = 0xFFFFFF
+
+tile_grid = displayio.TileGrid(bitmap, pixel_shader=palette)
+tile_grid.y = 30
+
+group = displayio.Group()
+group.append(tile_grid)
+group.append(text_area)
+
+display.show(group)
+
+def show_dots(n):
+    bitmap.fill(0)
+    for i in range(1, min(n*2, display.width), 2):
+        bitmap[i] = 1
+
+show_dots(5)
 
 # wifi.radio.hostname = "waterer"
 #  connect to your SSID
@@ -216,15 +236,16 @@ def config_tdc():
 
 window_hours = 24
 max_waterings = 8
-watering_time = 10
+watering_time = 20
 avg_window = 50
 
 logs = []
 
 def get_last_waterings():
     count = 0
+    now = time.monotonic_ns()
     for timestamp in logs:
-        if time.monotonic_ns() - timestamp < (window_hours * 60 * 60 * 1000 * 1000):
+        if now - timestamp < (window_hours * 60 * 60 * 10**9):
             count += 1
     return count
 
@@ -257,7 +278,7 @@ def water(avg):
     current = time.monotonic_ns()
 
     # Only water once an hour if needed
-    if avg < (threshold.value/65535 * 30) and (current - last_water) > (60 * 60 * 10**9):
+    if avg < (threshold.value/65535 * 30) and (not last_water or (current - last_water) > (60 * 60 * 10**9)):
         if get_last_waterings() <= max_waterings:
             last_water = current
             logs.append(last_water)
@@ -291,6 +312,7 @@ def main():
 
         log_line = "Sen:\t{:>5.3f}\nSet:\t{:>5.3f}".format(avg, threshold.value/65535 * 30)
         text_area.text = log_line
+        show_dots(get_last_waterings())
         # print(log_line)
         # print()
 
