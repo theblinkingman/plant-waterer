@@ -18,6 +18,16 @@ import busio
 import adafruit_si5351
 import adafruit_pioasm
 import rp2pio
+import json
+import microcontroller
+import watchdog
+
+from microcontroller import watchdog as w
+watch_enabled = False
+# watch_enabled = True
+# w.timeout = 5
+# w.mode = watchdog.WatchDogMode.RESET
+# w.feed()
 
 # Setup OLED display
 displayio.release_displays()
@@ -56,13 +66,31 @@ def show_dots(n):
 
 show_dots(5)
 
-# wifi.radio.hostname = "waterer"
+wifi.radio.hostname = os.getenv('HOSTNAME')
 #  connect to your SSID
-# wifi.radio.connect(os.getenv('WIFI_SSID'), os.getenv('WIFI_PASSWORD'))
+wifi.radio.connect(os.getenv('WIFI_SSID'), os.getenv('WIFI_PASSWORD'))
+print("Connected to WiFi")
+if watch_enabled:
+    w.feed()
+# Setup the HTTP server to return results
+pool = socketpool.SocketPool(wifi.radio)
+http = server.HTTPServer(pool)
 
-# print("Connected to WiFi")
+measurements = []
 
-# pool = socketpool.SocketPool(wifi.radio)
+@http.route("/")
+def base(request):
+    with response.HTTPResponse(request, content_type="text/JSON") as resp:
+        resp.send(json.dumps(measurements))
+
+try:
+    http.start(str(wifi.radio.ipv4_address))
+    print("Listening on http://%s" % wifi.radio.ipv4_address)
+#  if the server fails to begin, restart the pico w
+except OSError:
+    time.sleep(5)
+    print("restarting..")
+    microcontroller.reset()
 
 #  onboard LED setup
 led = DigitalInOut(board.LED)
@@ -77,11 +105,14 @@ motor2.direction = digitalio.Direction.OUTPUT
 motor1.value = False
 motor2.value = False
 
-
 def run_motor(sec):
-    time.sleep(0.1)
     motor2.value = True
-    time.sleep(sec)
+    count = 0
+    while count < sec:
+        count += 1
+        if watch_enabled:
+            w.feed()
+        time.sleep(1)
     motor2.value = False
 
 # TDR sensor
@@ -190,7 +221,7 @@ def calc_tof_mode1(clock, time, cal1, cal2):
 
 samples = []
 next_samp = 0
-window_size = 10
+window_size = 20
 samp_min = 8
 samp_max = 50
 def add_sample(new_samp):
@@ -282,8 +313,8 @@ def water(avg):
         if get_last_waterings() <= max_waterings:
             last_water = current
             logs.append(last_water)
-            print(current)
-            # print(timestamp.isoformat() + "\tWatering!!! %d" % get_last_waterings()) 
+            measurements.append((current, 'WATERING'))
+            print("Watering!!!") 
             text_area.text = "Watering!"
             run_motor(watering_time)
             return True
@@ -306,6 +337,7 @@ def main():
         counter = (counter + 1) % window_size
         if counter == 0:
             print("\nTOF = %s" % (avg))
+            measurements.append((time.monotonic_ns(), avg))
             water(avg)
         else:
             print(".", end="")
@@ -313,6 +345,10 @@ def main():
         log_line = "Sen:\t{:>5.3f}\nSet:\t{:>5.3f}".format(avg, threshold.value/65535 * 30)
         text_area.text = log_line
         show_dots(get_last_waterings())
+
+        if watch_enabled:
+            w.feed()
+        http.poll()
         # print(log_line)
         # print()
 
