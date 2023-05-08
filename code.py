@@ -13,7 +13,6 @@ import os
 import wifi
 import socketpool
 import ipaddress
-from adafruit_httpserver import server, response
 import busio
 import adafruit_si5351
 import adafruit_pioasm
@@ -21,6 +20,7 @@ import rp2pio
 import json
 import microcontroller
 import watchdog
+import adafruit_requests as requests
 
 from microcontroller import watchdog as w
 watch_enabled = False
@@ -74,23 +74,18 @@ if watch_enabled:
     w.feed()
 # Setup the HTTP server to return results
 pool = socketpool.SocketPool(wifi.radio)
-http = server.HTTPServer(pool)
+http = requests.Session(pool)
 
-measurements = []
-
-@http.route("/")
-def base(request):
-    with response.HTTPResponse(request, content_type="text/JSON") as resp:
-        resp.send(json.dumps(measurements))
-
-try:
-    http.start(str(wifi.radio.ipv4_address))
-    print("Listening on http://%s" % wifi.radio.ipv4_address)
-#  if the server fails to begin, restart the pico w
-except OSError:
-    time.sleep(5)
-    print("restarting..")
-    microcontroller.reset()
+def send_log(data):
+    if watch_enabled:
+        w.feed()
+    try:
+        http.post(os.getenv('POST_URL'), data=json.dumps(data), timeout=4)
+    except Exception as e:
+        print(e)
+        pass
+    if watch_enabled:
+        w.feed()
 
 #  onboard LED setup
 led = DigitalInOut(board.LED)
@@ -275,9 +270,13 @@ logs = []
 def get_last_waterings():
     count = 0
     now = time.monotonic_ns()
-    for timestamp in logs:
+    temp = logs[:]
+    logs.clear()
+    for timestamp in temp:
         if now - timestamp < (window_hours * 60 * 60 * 10**9):
             count += 1
+            logs.append(timestamp)
+    
     return count
 
 def do_measurement():
@@ -313,8 +312,8 @@ def water(avg):
         if get_last_waterings() <= max_waterings:
             last_water = current
             logs.append(last_water)
-            measurements.append((current, 'WATERING'))
             print("Watering!!!") 
+            send_log({'host': os.getenv('HOSTNAME'), 'reading': 'WATERING'})
             text_area.text = "Watering!"
             run_motor(watering_time)
             return True
@@ -337,7 +336,7 @@ def main():
         counter = (counter + 1) % window_size
         if counter == 0:
             print("\nTOF = %s" % (avg))
-            measurements.append((time.monotonic_ns(), avg))
+            send_log({'host': os.getenv('HOSTNAME'), 'reading': avg})
             water(avg)
         else:
             print(".", end="")
@@ -348,7 +347,6 @@ def main():
 
         if watch_enabled:
             w.feed()
-        http.poll()
         # print(log_line)
         # print()
 
