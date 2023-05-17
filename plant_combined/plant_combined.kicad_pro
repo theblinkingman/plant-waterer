@@ -441,7 +441,7 @@
         "name": "50R",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.29337,
+        "track_width": 0.34925,
         "via_diameter": 0.6096,
         "via_drill": 0.3048,
         "wire_width": 6
