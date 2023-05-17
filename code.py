@@ -155,6 +155,8 @@ CAL_MASK = (1 << 23) - 1
 TIME_MASK = (1 << 23) - 1
 COUNT_MASK = (1 << 16) - 1
 
+COMPLETE_MASK = (1 << 4)
+
 AUTO_INC_MASK = 0b10000000
 RW_BIT = 0b01000000
 REG_MASK = 0b0011111
@@ -286,10 +288,13 @@ def do_measurement():
     write_register(CONFIG1_ADDR, start_measure)
 
     # Wait for a measurement to be ready
-    while done.value:
-        pass
+    count = 0
+    done_flag = 0
+    while done.value and not done_flag:
         # print("+", end="")
-    # print("")
+        count += 1
+        if count % 1000 == 0:
+            done_flag = read_register(INT_STATUS_ADDR) & COMPLETE_MASK
 
     time1 = read_register(TIME1_ADDR, reg_size=3) & TIME_MASK
     # print("TIME1 = %s " % hex(time1))
