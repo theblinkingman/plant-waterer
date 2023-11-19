@@ -2437,7 +2437,7 @@
   (symbol (lib_id "Device:R") (at 69.85 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 032f2933-d2b7-415c-b3d4-bb3f2b53b793)
-    (property "Reference" "R9" (at 72.39 26.035 0)
+    (property "Reference" "R3" (at 72.39 26.035 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4K7" (at 72.39 28.575 0)
@@ -2454,7 +2454,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "R9") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2488,7 +2488,7 @@
           (reference "C2") (unit 1)
         )
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "C15") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
       (project "tdr_pos"
@@ -2502,7 +2502,7 @@
   (symbol (lib_id "power:GND") (at 78.74 148.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0b7dc0e9-538d-4047-b61b-e6ab7e2f02e0)
-    (property "Reference" "#PWR047" (at 78.74 154.94 0)
+    (property "Reference" "#PWR010" (at 78.74 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 78.74 153.67 0)
@@ -2518,7 +2518,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2532,7 +2532,7 @@
   (symbol (lib_id "power:GND") (at 129.54 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 131deb12-3a17-46ec-8ed3-a6f40c882eec)
-    (property "Reference" "#PWR049" (at 129.54 157.48 0)
+    (property "Reference" "#PWR014" (at 129.54 157.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 129.54 156.21 0)
@@ -2548,7 +2548,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR049") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2581,7 +2581,7 @@
           (reference "#PWR07") (unit 1)
         )
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
       (project "tdr_pos"
@@ -2595,7 +2595,7 @@
   (symbol (lib_id "Device:R") (at 62.23 26.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 23bc4fea-a072-4ad4-87ab-e83999ca1d73)
-    (property "Reference" "R5" (at 64.77 25.3999 0)
+    (property "Reference" "R2" (at 64.77 25.3999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4K7" (at 64.77 27.9399 0)
@@ -2612,7 +2612,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "R5") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2626,7 +2626,7 @@
   (symbol (lib_id "Device:C") (at 153.67 139.7 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2963333e-8002-43a0-a8b2-f3576ef66aec)
-    (property "Reference" "C7" (at 157.48 138.43 0)
+    (property "Reference" "C6" (at 157.48 138.43 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1uF" (at 157.48 140.97 0)
@@ -2643,7 +2643,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "C7") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2657,7 +2657,7 @@
   (symbol (lib_id "Device:C") (at 212.09 135.89 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 31c202c9-00d3-489c-81a4-53d43be1bc8b)
-    (property "Reference" "C14" (at 208.28 134.62 0)
+    (property "Reference" "C8" (at 208.28 134.62 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10uF" (at 208.28 137.16 0)
@@ -2674,7 +2674,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "C14") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2708,7 +2708,7 @@
           (reference "R6") (unit 1)
         )
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "R14") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
       (project "tdr_pos"
@@ -2722,7 +2722,7 @@
   (symbol (lib_id "Connector:TestPoint_2Pole") (at 91.44 144.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 37167e03-838d-474f-99ba-77ed6929b671)
-    (property "Reference" "TP4" (at 91.44 142.24 0)
+    (property "Reference" "TP2" (at 91.44 142.24 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TestPoint_2Pole" (at 91.44 142.24 0)
@@ -2739,7 +2739,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "TP4") (unit 1)
+          (reference "TP2") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2758,7 +2758,7 @@
   (symbol (lib_id "power:GND") (at 33.02 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3c3e4827-0c69-4aeb-9b51-e5d19c2025b4)
-    (property "Reference" "#PWR030" (at 33.02 143.51 0)
+    (property "Reference" "#PWR02" (at 33.02 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 33.02 142.24 0)
@@ -2774,7 +2774,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2788,7 +2788,7 @@
   (symbol (lib_id "power:+5V") (at 176.53 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 411b0549-4bf6-4d90-8201-6e8e1c374995)
-    (property "Reference" "#PWR048" (at 176.53 124.46 0)
+    (property "Reference" "#PWR024" (at 176.53 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 176.53 115.57 0)
@@ -2804,7 +2804,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2856,7 +2856,7 @@
   (symbol (lib_id "power:GND") (at 140.97 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4611aa55-601a-4345-97cc-2915a43dda90)
-    (property "Reference" "#PWR050" (at 140.97 157.48 0)
+    (property "Reference" "#PWR016" (at 140.97 157.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 140.97 156.21 0)
@@ -2872,7 +2872,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2886,7 +2886,7 @@
   (symbol (lib_id "power:GND") (at 212.09 143.51 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 46f6379b-1030-4384-912d-9fac85c687b0)
-    (property "Reference" "#PWR04" (at 212.09 149.86 0)
+    (property "Reference" "#PWR027" (at 212.09 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 212.09 148.59 0)
@@ -2902,7 +2902,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2916,7 +2916,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 199.39 119.38 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4a06b281-14d8-4f4b-b470-18210aa7f0fd)
-    (property "Reference" "J3" (at 199.39 113.03 0)
+    (property "Reference" "J2" (at 199.39 113.03 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x02" (at 199.39 115.57 0)
@@ -2933,7 +2933,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "J3") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2947,7 +2947,7 @@
   (symbol (lib_id "power:+5V") (at 146.05 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4cf7f9b9-a845-447f-a2d8-6a7f71c8acce)
-    (property "Reference" "#PWR041" (at 146.05 35.56 0)
+    (property "Reference" "#PWR018" (at 146.05 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 146.05 26.67 0)
@@ -2963,7 +2963,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -2977,7 +2977,7 @@
   (symbol (lib_id "power:GND") (at 241.3 144.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4d002ab6-6ff4-4571-8495-743c5c54cc48)
-    (property "Reference" "#PWR05" (at 241.3 151.13 0)
+    (property "Reference" "#PWR028" (at 241.3 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 241.3 149.86 0)
@@ -2993,7 +2993,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3007,7 +3007,7 @@
   (symbol (lib_id "power:GND") (at 68.58 55.88 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4e122cea-f84d-4d8c-bee9-c4525df9a036)
-    (property "Reference" "#PWR037" (at 68.58 62.23 0)
+    (property "Reference" "#PWR07" (at 68.58 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 68.58 60.96 0)
@@ -3023,7 +3023,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3037,7 +3037,7 @@
   (symbol (lib_id "Device:C") (at 140.97 139.7 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4f90746d-9b40-4abe-a15a-fda77ab4d2d2)
-    (property "Reference" "C8" (at 143.51 138.43 0)
+    (property "Reference" "C5" (at 143.51 138.43 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "22uF" (at 143.51 140.97 0)
@@ -3054,7 +3054,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "C8") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3068,7 +3068,7 @@
   (symbol (lib_id "power:+3.3VA") (at 137.16 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4febcfb9-5f04-463f-b781-b4b71de08593)
-    (property "Reference" "#PWR059" (at 137.16 35.56 0)
+    (property "Reference" "#PWR015" (at 137.16 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 137.16 27.94 0)
@@ -3084,7 +3084,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR059") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -3093,7 +3093,7 @@
   (symbol (lib_id "Device:R_Potentiometer") (at 154.94 58.42 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 50d44fcf-1dc1-4f9f-aee1-9d92f25ad671)
-    (property "Reference" "RV2" (at 157.48 57.1499 0)
+    (property "Reference" "RV1" (at 157.48 57.1499 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "R_Potentiometer" (at 156.21 66.04 0)
@@ -3111,7 +3111,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "RV2") (unit 1)
+          (reference "RV1") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3159,7 +3159,7 @@
   (symbol (lib_id "power:GND") (at 45.72 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5354c191-2d86-4ab0-827c-2f2b71c4a5cd)
-    (property "Reference" "#PWR034" (at 45.72 46.99 0)
+    (property "Reference" "#PWR04" (at 45.72 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 45.72 45.72 0)
@@ -3175,7 +3175,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3189,7 +3189,7 @@
   (symbol (lib_id "power:+3.3V") (at 269.24 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 545b22ac-bc37-4f11-bb20-3fb2ed95f614)
-    (property "Reference" "#PWR011" (at 269.24 118.11 0)
+    (property "Reference" "#PWR029" (at 269.24 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 267.97 110.49 0)
@@ -3205,7 +3205,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3219,7 +3219,7 @@
   (symbol (lib_id "Device:R") (at 129.54 134.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 57f6cd5f-b0f0-46b3-8b55-98723db2d5e2)
-    (property "Reference" "R12" (at 132.08 133.985 0)
+    (property "Reference" "R6" (at 132.08 133.985 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "52K3" (at 132.08 136.525 0)
@@ -3236,7 +3236,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "R12") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -3245,7 +3245,7 @@
   (symbol (lib_id "power:+5V") (at 77.47 67.31 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 585effaf-4b3e-4d54-a3bf-3ef2661853b6)
-    (property "Reference" "#PWR038" (at 77.47 71.12 0)
+    (property "Reference" "#PWR09" (at 77.47 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 77.47 62.23 0)
@@ -3261,7 +3261,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3275,7 +3275,7 @@
   (symbol (lib_id "power:GND") (at 96.52 148.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 60aa1cf9-f5ab-4f60-af86-719b685f94b9)
-    (property "Reference" "#PWR055" (at 96.52 154.94 0)
+    (property "Reference" "#PWR012" (at 96.52 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 96.52 153.67 0)
@@ -3291,7 +3291,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3305,7 +3305,7 @@
   (symbol (lib_id "Device:R") (at 129.54 144.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6383f965-a82f-4d71-9cbf-2dee34424283)
-    (property "Reference" "R13" (at 132.08 144.145 0)
+    (property "Reference" "R7" (at 132.08 144.145 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 132.08 146.685 0)
@@ -3322,7 +3322,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "R13") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -3381,7 +3381,7 @@
           (reference "#PWR033") (unit 1)
         )
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -3390,7 +3390,7 @@
   (symbol (lib_id "power:GND") (at 101.6 144.78 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 75f7b047-e89e-46a2-a683-83b93300f86a)
-    (property "Reference" "#PWR031" (at 101.6 151.13 0)
+    (property "Reference" "#PWR013" (at 101.6 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 101.6 149.86 0)
@@ -3406,7 +3406,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3420,7 +3420,7 @@
   (symbol (lib_id "power:GND") (at 153.67 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 76f63f00-d60c-4f8f-905f-ddea9f7d1021)
-    (property "Reference" "#PWR054" (at 153.67 157.48 0)
+    (property "Reference" "#PWR020" (at 153.67 157.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 153.67 156.21 0)
@@ -3436,7 +3436,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3450,7 +3450,7 @@
   (symbol (lib_id "Device:C") (at 115.57 124.46 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 82788d9b-6208-4a2b-b6a7-b3d2a5484ea3)
-    (property "Reference" "C11" (at 118.11 123.19 0)
+    (property "Reference" "C4" (at 118.11 123.19 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100nF" (at 118.11 125.73 0)
@@ -3467,7 +3467,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "C11") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3481,7 +3481,7 @@
   (symbol (lib_id "power:GND") (at 85.09 93.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 83d60e62-3fcd-47c2-80a0-d8d34a0443fc)
-    (property "Reference" "#PWR039" (at 85.09 100.33 0)
+    (property "Reference" "#PWR011" (at 85.09 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 85.09 99.06 0)
@@ -3497,7 +3497,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3511,7 +3511,7 @@
   (symbol (lib_id "Device:C") (at 269.24 127 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8516212c-9bb4-4cd7-aaf7-f4399db407f1)
-    (property "Reference" "C13" (at 273.05 125.73 0)
+    (property "Reference" "C9" (at 273.05 125.73 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1uF" (at 273.05 128.27 0)
@@ -3528,7 +3528,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "C13") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3542,7 +3542,7 @@
   (symbol (lib_id "Device:C") (at 165.1 139.7 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8639f35d-2246-482f-b790-4c6efa54e325)
-    (property "Reference" "C10" (at 168.91 138.43 0)
+    (property "Reference" "C7" (at 168.91 138.43 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1uF" (at 168.91 140.97 0)
@@ -3559,7 +3559,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "C10") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3693,7 +3693,7 @@
           (reference "#PWR08") (unit 1)
         )
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
       (project "tdr_pos"
@@ -3707,7 +3707,7 @@
   (symbol (lib_id "power:GND") (at 17.78 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9df56504-8caa-4d87-a4e2-3f100cdc42d7)
-    (property "Reference" "#PWR029" (at 17.78 43.18 0)
+    (property "Reference" "#PWR01" (at 17.78 43.18 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 17.78 41.91 0)
@@ -3723,7 +3723,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3737,7 +3737,7 @@
   (symbol (lib_id "power:GND") (at 269.24 134.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9f8ba52f-3267-42d0-a0e5-11fa76c9a69c)
-    (property "Reference" "#PWR012" (at 269.24 140.97 0)
+    (property "Reference" "#PWR030" (at 269.24 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 269.24 139.7 0)
@@ -3753,7 +3753,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3767,7 +3767,7 @@
   (symbol (lib_id "MySymbols:ZXBM5210-SP-13") (at 226.06 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a8f55a0a-4d64-4092-b81b-aacbb4c08302)
-    (property "Reference" "U10" (at 241.3 113.03 0)
+    (property "Reference" "U4" (at 241.3 113.03 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ZXBM5210-SP-13" (at 241.3 115.57 0)
@@ -3821,7 +3821,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "U10") (unit 1)
+          (reference "U4") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3835,7 +3835,7 @@
   (symbol (lib_id "Device:C") (at 85.09 135.89 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b29b538e-4271-4521-9bc8-344bae7957ba)
-    (property "Reference" "C9" (at 87.63 134.62 0)
+    (property "Reference" "C3" (at 87.63 134.62 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10uF" (at 87.63 137.16 0)
@@ -3852,7 +3852,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "C9") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3866,7 +3866,7 @@
   (symbol (lib_id "power:+12P") (at 69.85 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b51a9dfb-3e51-4076-97e0-f1dd3bbdc5ee)
-    (property "Reference" "#PWR044" (at 69.85 124.46 0)
+    (property "Reference" "#PWR08" (at 69.85 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12P" (at 69.85 116.84 0)
@@ -3882,7 +3882,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR044") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3896,7 +3896,7 @@
   (symbol (lib_id "power:GND") (at 142.24 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b82eb33d-9c57-485a-8aac-f90854b6b8bc)
-    (property "Reference" "#PWR040" (at 142.24 99.06 0)
+    (property "Reference" "#PWR017" (at 142.24 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.24 97.79 0)
@@ -3912,7 +3912,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3926,7 +3926,7 @@
   (symbol (lib_id "power:GND") (at 154.94 66.04 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b922c97b-a372-4494-83d8-40beaf993e5a)
-    (property "Reference" "#PWR043" (at 154.94 72.39 0)
+    (property "Reference" "#PWR022" (at 154.94 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 154.94 71.12 0)
@@ -3942,7 +3942,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3956,7 +3956,7 @@
   (symbol (lib_id "MySymbols:OLED_DISP") (at 69.85 77.47 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ba0b297b-9e9e-4c42-8d2a-1b50074932fe)
-    (property "Reference" "U2" (at 59.69 72.3899 0)
+    (property "Reference" "U1" (at 59.69 72.3899 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "OLED_DISP" (at 59.69 74.9299 0)
@@ -3975,7 +3975,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "U2") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -3989,7 +3989,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 77.47 123.19 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c1b8d6bb-fd2c-49e4-921b-9a07554f6490)
-    (property "Reference" "TP5" (at 77.47 116.84 90)
+    (property "Reference" "TP1" (at 77.47 116.84 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TestPoint" (at 76.2 118.11 90)
@@ -4005,7 +4005,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "TP5") (unit 1)
+          (reference "TP1") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -4019,7 +4019,7 @@
   (symbol (lib_id "power:GND") (at 165.1 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c2e5e6c7-6263-4556-be67-7de89a4e841d)
-    (property "Reference" "#PWR053" (at 165.1 157.48 0)
+    (property "Reference" "#PWR023" (at 165.1 157.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 165.1 156.21 0)
@@ -4035,7 +4035,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR053") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -4049,7 +4049,7 @@
   (symbol (lib_id "Device:C") (at 73.66 135.89 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cb9db0ea-2cd8-4496-982d-9bb4106d0788)
-    (property "Reference" "C12" (at 76.2 134.62 0)
+    (property "Reference" "C2" (at 76.2 134.62 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "100uF" (at 76.2 137.16 0)
@@ -4066,7 +4066,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "C12") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -4080,7 +4080,7 @@
   (symbol (lib_id "power:+12P") (at 207.01 129.54 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ccbe8654-165f-48ec-bf77-dcd6f84f000b)
-    (property "Reference" "#PWR01" (at 207.01 133.35 0)
+    (property "Reference" "#PWR026" (at 207.01 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+12P" (at 207.01 125.73 0)
@@ -4096,7 +4096,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -4110,7 +4110,7 @@
   (symbol (lib_id "RPi_Pico:PicoW") (at 114.3 67.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cddf6134-1858-494a-9100-ff9e8d917455)
-    (property "Reference" "U8" (at 114.3 36.83 0)
+    (property "Reference" "U3" (at 114.3 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PicoW" (at 114.3 39.37 0)
@@ -4168,7 +4168,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "U8") (unit 1)
+          (reference "U3") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -4182,7 +4182,7 @@
   (symbol (lib_id "power:+3.3V") (at 147.32 52.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid db71d58f-7f17-44d0-ad27-28e9aa890d87)
-    (property "Reference" "#PWR042" (at 147.32 55.88 0)
+    (property "Reference" "#PWR019" (at 147.32 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 146.05 48.26 0)
@@ -4198,7 +4198,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -4212,7 +4212,7 @@
   (symbol (lib_id "power:GND") (at 176.53 148.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dbbc0de0-b44e-4b9c-97f3-1f181db44bd4)
-    (property "Reference" "#PWR051" (at 176.53 154.94 0)
+    (property "Reference" "#PWR025" (at 176.53 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 176.53 153.67 0)
@@ -4228,7 +4228,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -4262,7 +4262,7 @@
           (reference "R3") (unit 1)
         )
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "R16") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
       (project "tdr_pos"
@@ -4333,7 +4333,7 @@
   (symbol (lib_id "MySymbols:PJ-002AH") (at 25.4 130.81 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e898ff06-0d73-46c7-bd96-7926c4206ff5)
-    (property "Reference" "J2" (at 22.1615 120.65 0)
+    (property "Reference" "J1" (at 22.1615 120.65 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PJ-002AH" (at 22.1615 123.19 0)
@@ -4357,7 +4357,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "J2") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
       (project "plant_waterer"
@@ -4391,7 +4391,7 @@
           (reference "R6") (unit 1)
         )
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "R15") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
       (project "tdr_pos"
@@ -4405,7 +4405,7 @@
   (symbol (lib_id "power:+3.3VA") (at 66.04 21.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fa613d1b-4eb7-4701-bce8-dd5a79b76ee3)
-    (property "Reference" "#PWR060" (at 66.04 25.4 0)
+    (property "Reference" "#PWR05" (at 66.04 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA" (at 66.04 17.78 0)
@@ -4421,7 +4421,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "#PWR060") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -4430,7 +4430,7 @@
   (symbol (lib_id "MySymbols:AP62200WU-7") (at 95.25 124.46 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fc8a58ae-9f8d-496e-8a9b-d5b59c3f2d45)
-    (property "Reference" "U9" (at 101.6 121.92 0)
+    (property "Reference" "U2" (at 101.6 121.92 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "AP62200WU-7" (at 101.6 124.46 0)
@@ -4454,7 +4454,7 @@
     (instances
       (project "plant_combined"
         (path "/0c0a9329-c070-44ba-a98c-07a53ea4a4f2"
-          (reference "U9") (unit 1)
+          (reference "U2") (unit 1)
         )
       )
     )

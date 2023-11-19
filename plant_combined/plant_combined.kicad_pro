@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.05,
-          "width": 1.0
+          "height": 2.2,
+          "width": 1.05
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -474,7 +474,7 @@
     "netclass_patterns": [
       {
         "netclass": "Power",
-        "pattern": "+*"
+        "pattern": "*+*"
       },
       {
         "netclass": "Power",

@@ -157,3 +157,7 @@ plant_waterer/fp-info-cache
 plant_combined/plant_combined-backups/
 plant_waterer/production/
 settings.toml
+
+plant_combined/#auto_saved_files#
+
+plant_combined/fp-info-cache
