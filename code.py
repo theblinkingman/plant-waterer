@@ -18,16 +18,18 @@ import adafruit_si5351
 import adafruit_pioasm
 import rp2pio
 import json
-import microcontroller
 import watchdog
 import adafruit_requests as requests
 
 from microcontroller import watchdog as w
-watch_enabled = False
-# watch_enabled = True
-# w.timeout = 5
-# w.mode = watchdog.WatchDogMode.RESET
-# w.feed()
+#watch_enabled = False
+watch_enabled = True
+if watch_enabled:
+    print("About to enable watchdog")
+    time.sleep(5)
+    w.timeout = 5
+    w.mode = watchdog.WatchDogMode.RESET
+    w.feed()
 
 # Setup OLED display
 displayio.release_displays()
@@ -66,17 +68,18 @@ def show_dots(n):
 
 show_dots(5)
 
-wifi.radio.hostname = os.getenv('HOSTNAME')
+# wifi.radio.hostname = os.getenv('HOSTNAME')
 #  connect to your SSID
-wifi.radio.connect(os.getenv('WIFI_SSID'), os.getenv('WIFI_PASSWORD'))
-print("Connected to WiFi")
+# wifi.radio.connect(os.getenv('WIFI_SSID'), os.getenv('WIFI_PASSWORD'))
+# print("Connected to WiFi")
 if watch_enabled:
     w.feed()
 # Setup the HTTP server to return results
-pool = socketpool.SocketPool(wifi.radio)
-http = requests.Session(pool)
+#pool = socketpool.SocketPool(wifi.radio)
+#http = requests.Session(pool)
 
 def send_log(data):
+    return
     if watch_enabled:
         w.feed()
     try:
@@ -138,7 +141,7 @@ spi = busio.SPI(board.GP2, MISO=board.GP4, MOSI=board.GP3)
 def open_spi():
     while not spi.try_lock():
         pass
-    spi.configure(baudrate=2000000, phase=0, polarity=0)
+    spi.configure(baudrate=20000000, phase=0, polarity=0)
 
 CONFIG1_ADDR = 0
 CONFIG2_ADDR = 1
@@ -210,7 +213,7 @@ def calc_tof_mode1(clock, time, cal1, cal2):
         return -1
     freq = clock.clock_0.frequency
     period = 1/freq
-    calCount = (cal2 - cal1)/9 # using default cal periods of 10 
+    calCount = (cal2 - cal1)/9 # using default cal periods of 10
     if calCount == 0:
         return -1
     normLSB = period / calCount
@@ -236,13 +239,13 @@ def add_sample(new_samp):
 def median(lst):
     n = len(lst)
     s = sorted(lst)
-    return (s[n//2-1]/2.0+s[n//2]/2.0, s[n//2])[n % 2] if n else None    
+    return (s[n//2-1]/2.0+s[n//2]/2.0, s[n//2])[n % 2] if n else None
 
 # This will trigger a pulse whenever the TDC requests it
 trigger_pio = '''
 .program trigger
     wait 1 pin 0    ; wait for trigger pin to be set
-    set pins, 1     ; send pulse 
+    set pins, 1     ; send pulse
     set pins, 0
     ; loop back to the beginning
 '''
@@ -278,7 +281,7 @@ def get_last_waterings():
         if now - timestamp < (window_hours * 60 * 60 * 10**9):
             count += 1
             logs.append(timestamp)
-    
+
     return count
 
 def do_measurement():
@@ -312,17 +315,25 @@ def water(avg):
     global last_water
     current = time.monotonic_ns()
 
+    # Check if we are over the threshold
+    if avg > (threshold.value/65535 * 30):
+        return False
+
     # Only water once an hour if needed
-    if avg < (threshold.value/65535 * 30) and (not last_water or (current - last_water) > (60 * 60 * 10**9)):
+    if (not last_water or (current - last_water) > (60 * 60 * 10**9)):
         if get_last_waterings() <= max_waterings:
             last_water = current
             logs.append(last_water)
-            print("Watering!!!") 
+            print("Watering!!!")
             send_log({'host': os.getenv('HOSTNAME'), 'reading': 'WATERING'})
             text_area.text = "Watering!"
             run_motor(watering_time)
             return True
-    
+        else:
+            print("Skipping watering! %d recent" % get_last_waterings())
+    else:
+        print("Skipping watering! Watered in the last hour")
+
     return False
 
 def main():
